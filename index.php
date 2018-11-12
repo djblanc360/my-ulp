@@ -1,3 +1,5 @@
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="/path/to/masonry.pkgd.min.js"></script>
 <?php
 /**
  * The main template file
@@ -19,6 +21,32 @@ get_header();
 		<main id="main" class="site-main">
 
 			<div class="container">
+				
+				<div class="grid">
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+				  <div class="grid-item grid-item--height3"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				  <div class="grid-item grid-item--width3"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				  <div class="grid-item grid-item--width2 grid-item--height3"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+				  <div class="grid-item grid-item--width2"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--height3"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item"></div>
+				  <div class="grid-item grid-item--height2"></div>
+				</div>
 
 				<div class="row">
 					<div class="col-sm-9">
