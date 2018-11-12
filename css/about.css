@@ -1,0 +1,17 @@
+.page-template-page-about .aboutIntroInner { text-align: center; }
+
+.page-template-page-about #nonProfit { background-color: #0A2B4E; }
+
+.page-template-page-about #nonProfit .nonProfitInner { padding-top: 6rem; padding-bottom: 6rem; color: #fff; }
+
+.page-template-page-about #ulpCommunity .commMemberContainer { margin-bottom: 2rem; }
+
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap { width: 150px; height: 150px; border-radius: 50%; border: 2px solid #FDB827; display: inline-block; margin: auto auto 1rem auto; }
+
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap img { border: 2px solid #fff; border-radius: 50%; overflow: hidden; }
+
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap:hover { border-color: #0A2B4E; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWJvdXQuY3NzIiwic291cmNlcyI6WyJhYm91dC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBLEFBQ0UseUJBRHVCLENBQ3ZCLGdCQUFnQixDQUFDLEVBQ2YsVUFBVSxFQUFFLE1BQU0sR0FDbkI7O0FBSEgsQUFJRSx5QkFKdUIsQ0FJdkIsVUFBVSxDQUFDLEVBQ1QsZ0JBQWdCLEVBVGIsT0FBTyxHQWVYOztBQVhILEFBTUkseUJBTnFCLENBSXZCLFVBQVUsQ0FFUixlQUFlLENBQUMsRUFDZCxXQUFXLEVBQUUsSUFBSSxFQUNqQixjQUFjLEVBQUUsSUFBSSxFQUNwQixLQUFLLEVBQUUsSUFBSSxHQUNaOztBQVZMLEFBYUkseUJBYnFCLENBWXZCLGFBQWEsQ0FDWCxvQkFBb0IsQ0FBQyxFQUNuQixhQUFhLEVBQUUsSUFBSSxHQWlCcEI7O0FBL0JMLEFBZU0seUJBZm1CLENBWXZCLGFBQWEsQ0FDWCxvQkFBb0IsQ0FFbEIsa0JBQWtCLENBQUMsRUFDakIsS0FBSyxFQUFFLEtBQUssRUFDWixNQUFNLEVBQUUsS0FBSyxFQUNiLGFBQWEsRUFBRSxHQUFHLEVBQ2xCLE1BQU0sRUFBRSxHQUFHLENBQUMsS0FBSyxDQXRCaEIsT0FBTyxFQXVCUixPQUFPLEVBQUUsWUFBWSxFQUNyQixNQUFNLEVBQUUsbUJBQW1CLEdBUzVCOztBQTlCUCxBQXNCUSx5QkF0QmlCLENBWXZCLGFBQWEsQ0FDWCxvQkFBb0IsQ0FFbEIsa0JBQWtCLENBT2hCLEdBQUcsQ0FBQyxFQUNGLE1BQU0sRUFBRSxHQUFHLENBQUMsS0FBSyxDQXpCbkIsSUFBSSxFQTBCRixhQUFhLEVBQUUsR0FBRyxFQUNsQixRQUFRLEVBQUUsTUFBTSxHQUNqQjs7QUExQlQsQUEyQlEseUJBM0JpQixDQVl2QixhQUFhLENBQ1gsb0JBQW9CLENBRWxCLGtCQUFrQixBQVlmLE1BQU0sQ0FBQyxFQUNOLFlBQVksRUFoQ2YsT0FBTyxHQWlDTCJ9 */
+
+/*# sourceMappingURL=about.css.map */

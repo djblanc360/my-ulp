@@ -1,0 +1,7 @@
+.page-template-page-about .aboutIntroInner{text-align:center}
+.page-template-page-about #nonProfit{background-color:#0a2b4e}
+.page-template-page-about #nonProfit .nonProfitInner{padding-top:6rem;padding-bottom:6rem;color:#fff}
+.page-template-page-about #ulpCommunity .commMemberContainer{margin-bottom:2rem}
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap{width:150px;height:150px;border-radius:50%;border:2px solid #fdb827;display:inline-block;margin:auto auto 1rem auto}
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap img{border:2px solid #fff;border-radius:50%;overflow:hidden}
+.page-template-page-about #ulpCommunity .commMemberContainer .commMemberImgWrap:hover{border-color:#0a2b4e}
