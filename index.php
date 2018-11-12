@@ -19,6 +19,9 @@ get_header();
 		<main id="main" class="site-main">
 
 			<div class="container">
+				<p>
+					testing
+				</p>
 				<div class="row">
 					<div class="col-sm-9">
 
@@ -54,8 +57,8 @@ get_header();
 
 		endif;
 		?>
-		
-						
+
+
 					</div>
 					<div class="col-sm-3">
 						<?php get_sidebar(); ?>
