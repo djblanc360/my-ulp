@@ -16,9 +16,7 @@ get_header();
 			<section id="aboutIntro" class="container">
 
 				<div class="aboutIntroInner">
-					<p>
-						testing
-					</p>					
+				
 					<h2>About University Lab Partners</h2>
 					<?php
 					while ( have_posts() ) :
