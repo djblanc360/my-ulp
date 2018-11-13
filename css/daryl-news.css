@@ -19,7 +19,7 @@ div.ms-item
 div.ms-item .overlay
 {
     position:absolute;
-    width: 33%;
+    width: 100%;
     background-color:#0A2B4E;
     display:none;
 }
@@ -30,6 +30,7 @@ div.ms-item:hover .overlay
 
 .overlay {
   color:white;
+  font-size: 12px;
 }
 
 #ms-container {
