@@ -16,27 +16,34 @@ div.ms-item
     position:relative;
 }
 
-div.ms-item .overlay
-{
-    position:absolute;
-    width: 100%;
-    background-color:#0A2B4E;
-    display:none;
-}
-div.ms-item:hover .overlay
-{
-    display:block;
-}
-
 .overlay {
-  color:white;
-  font-size: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
 }
 
-a.overlay.post-title-link {color:white;}
-a.overlay:link {color:#white;}
-a.overlay:visited {color:##FDB827;}
-a.overlay:hover {}
+.ms-item:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 #ms-container {
   grid-column-gap: 1em;
