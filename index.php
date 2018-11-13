@@ -22,11 +22,8 @@ get_header();
 
 			<div class="container">
 
-				<div class="row">
-					<P>
-						adding stuff
-					</P>
-					<div class="col-9">
+	
+
 
 						<div class="grid">
 							<div class="grid-item">
@@ -68,11 +65,7 @@ get_header();
 						</div><!--end grid -->
 
 
-					</div> <!--end col-9 -->
-					<div class="col-3">
-						<?php get_sidebar(); ?>
-					</div>
-				</div>
+
 			</div>
 
 		</main><!-- #main -->
