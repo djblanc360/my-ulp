@@ -23,7 +23,7 @@ get_header();
 			<div class="container">
 
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-9">
 
 						<div class="grid">
 							<div class="grid-item">
@@ -41,6 +41,7 @@ get_header();
 
 									/* Start the Loop */
 									while ( have_posts() ) :
+
 										the_post();
 
 										/*
@@ -60,13 +61,12 @@ get_header();
 
 								endif;
 								?>
-
 							</div><!--end grid-tem-->
 						</div><!--end grid -->
 
 
-					</div>
-					<div class="col-sm-3">
+					</div> <!--end col-9 -->
+					<div class="col-3">
 						<?php get_sidebar(); ?>
 					</div>
 				</div>
