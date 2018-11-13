@@ -60,3 +60,17 @@ h2 {
 hr {
   border-color:#fdc95a;
 }
+
+.overlay
+{
+    position:absolute;
+    top:45%;
+    width:100;
+    width:150px;
+    background-color:#0A2B4E;
+    display:none;width:150px;
+}
+.overlay
+{
+    display:block;
+}
