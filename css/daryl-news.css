@@ -26,14 +26,14 @@ div.ms-item
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #0A2B4E;
 }
 
 .ms-item:hover .overlay {
   opacity: 1;
 }
 
-.text {
+.overlay-text {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -44,7 +44,20 @@ div.ms-item
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.overlay-text a:hover,
+.overlay-text a:visited
+{
+    background-color: white;
+}
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
 
+/* selected link */
+a:active {
+    color: blue;
+}
 #ms-container {
   grid-column-gap: 1em;
   grid-row-gap: 1em;

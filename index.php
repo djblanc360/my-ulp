@@ -63,7 +63,7 @@ get_header();
     <div class="clearfix"></div>
 
 				<div class="overlay">
-					<div class="text">
+					<div class="overlay-text">
 									<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h6>
 									<P>
 										<?php the_author(); ?>  |	<?php the_category( ', ' ); ?>
