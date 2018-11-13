@@ -36,8 +36,20 @@ get_header();
 
     <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="overlay">
-				<span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span>
-		</div><!-- end overlay -->	
+								<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h6>
+								<P>
+									<?php the_author(); ?>  |	<?php the_category( ', ' ); ?>
+								</P>
+								<hr>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block read-more-button">Read More</a>
+								<div class="clearfix"></div>
+						<hr>
+						<p>
+						<?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?>
+						</p>
+				<div class="clearfix"></div>
+			</div><!-- end overlay -->
         <?php if (has_post_thumbnail()) : ?>
 
             <figure class="article-preview-image">
