@@ -47,11 +47,11 @@ div.ms-item
 .overlay-text a:hover,
 .overlay-text a:visited
 {
-    background-color: white;
+    color: white;
 }
-/* mouse over link */
+
 a:hover {
-    color: hotpink;
+
 }
 
 /* selected link */
