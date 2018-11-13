@@ -33,6 +33,11 @@ div.ms-item:hover .overlay
   font-size: 12px;
 }
 
+a.overlay.post-title-link {color:white;}
+a.overlay:link {color:##FDB827;}
+a.overlay:visited {color:##FDB827;}
+a.overlay:hover {}
+
 #ms-container {
   grid-column-gap: 1em;
   grid-row-gap: 1em;
