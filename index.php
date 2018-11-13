@@ -22,7 +22,7 @@ get_header();
 
 			<div class="container">
 
-	
+
 
 
 						<div class="grid">
@@ -73,3 +73,4 @@ get_header();
 
 <?php
 get_footer();
+?>
