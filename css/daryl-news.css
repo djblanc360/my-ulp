@@ -32,8 +32,8 @@ padding: 1rem;
 }
 
 #ms-container {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
 h1 {
@@ -41,4 +41,8 @@ h1 {
   color: #0A2B4E ;
   text-align: center;
 
+}
+
+hr {
+  border-color:#fdc95a;
 }
