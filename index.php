@@ -1,6 +1,6 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 <script src="/path/to/masonry.pkgd.min.js"></script>
-<script src="/js/news.js"></script>
+
 <?php
 /**
  * The main template file
@@ -26,7 +26,7 @@ get_header();
 				<div class="row">
 
 					<div class="col-9">
-						
+
 						<div class="grid">
 							<div class="grid-item">
 							</div><!--end grid-tem-->
