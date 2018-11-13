@@ -67,19 +67,18 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<script type="text/javascript">
+
+			jQuery(window).load(function() {
+		var container = document.querySelector('#ms-container');
+		var msnry = new Masonry( container, {
+			itemSelector: '.ms-item',
+			columnWidth: '.ms-item',
+		});
+
+			});
+	</script>
 <?php
 get_footer();
 
-<script type="text/javascript">
-
-		jQuery(window).load(function() {
-	var container = document.querySelector('#ms-container');
-	var msnry = new Masonry( container, {
-		itemSelector: '.ms-item',
-		columnWidth: '.ms-item',
-	});
-
-		});
-
-
-</script>
+?>
