@@ -26,7 +26,7 @@ get_header();
 				<div class="row">
 
 					<div class="col-9">
-
+						
 						<div class="grid">
 							<div class="grid-item">
 							</div><!--end grid-tem-->
