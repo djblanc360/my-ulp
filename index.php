@@ -76,7 +76,7 @@ get_header();
 									<div class="clearfix"></div>
 							<hr>
 							<p>
-							<div class="overlay-link"> <?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?> </div>
+							<span class="overlay-link"> <?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?> </span>
 							</p>
 					<div class="clearfix"></div>
 				</div><!-- end text -->

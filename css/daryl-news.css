@@ -44,6 +44,11 @@ div.ms-item
   transform: translate(-40%, -40%);
 }
 
+/* LINK STYLING */
+.overlay-title a
+{
+    color: white;
+}
 .overlay-title a:visited
 {
     color: white;
@@ -58,7 +63,10 @@ div.ms-item
 .overlay-title a:active {
     color: white;
 }
-
+.overlay-link a
+{
+    color: #fdc95a;
+}
 .overlay-link a:visited
 {
     color: #fdc95a;
@@ -73,6 +81,8 @@ div.ms-item
 .overlay-link a:active {
     color: #fdc95a;
 }
+
+/* END STYLING */
 
 #ms-container {
   grid-column-gap: 1em;
