@@ -1,6 +1,6 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 <script src="/path/to/masonry.pkgd.min.js"></script>
-<script src="/js/news.js"></script>
+
 <?php
 /**
  * The main template file
@@ -23,55 +23,45 @@ get_header();
 
 			<div class="container">
 
-				<div class="row">
+				<div class="row" id="ms-container">
 
-					<div class="col-9">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<div class="grid">
-							<div class="grid-item">
-							</div><!--end grid-tem-->
-						</div><!--end grid -->
-								<?php
-								if ( have_posts() ) :
+				    <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
-									if ( is_home() && ! is_front_page() ) :
-										?>
-										<header>
-											<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-										</header>
-										<?php
-									endif;
+				        <?php if (has_post_thumbnail()) : ?>
 
-									/* Start the Loop */
-									while ( have_posts() ) :
+				            <figure class="article-preview-image">
 
-										the_post();
+				                <?php the_post_thumbnail('large'); ?>
 
-										/*
-										 * Include the Post-Type-specific template for the content.
-										 * If you want to override this in a child theme, then include a file
-										 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-										 */
-										get_template_part( 'template-parts/content', get_post_type() );
+				            </figure>
 
-									endwhile;
+				        <?php else : ?>
 
-									the_posts_navigation();
+				        <?php endif; ?>
 
-								else :
+				            <h2 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h2>
 
-									get_template_part( 'template-parts/content', 'none' );
+				        <?php the_excerpt(); ?>
 
-								endif;
-								?>
+				    <div class="clearfix"></div>
 
+				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
 
+				    <div class="clearfix"></div>
 
-					</div> <!--end col-9 -->
-					<div class="col-3">
-						<?php get_sidebar(); ?>
-					</div>
-				</div>
+				    </div>
+
+				    <?php endwhile;
+
+				    else : ?>
+
+				        <article class="no-posts">
+
+				            <h1><?php _e('No posts were found.'); ?></h1>
+
+				        </article>
 			</div>
 
 		</main><!-- #main -->
@@ -79,3 +69,17 @@ get_header();
 
 <?php
 get_footer();
+
+<script type="text/javascript">
+
+		jQuery(window).load(function() {
+	var container = document.querySelector('#ms-container');
+	var msnry = new Masonry( container, {
+		itemSelector: '.ms-item',
+		columnWidth: '.ms-item',
+	});
+
+		});
+
+
+</script>
