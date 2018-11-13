@@ -23,12 +23,13 @@ get_header();
 			<div class="container">
 
 				<div class="row">
-					
+
 					<div class="col-9">
 
 						<div class="grid">
 							<div class="grid-item">
-
+							</div><!--end grid-tem-->
+						</div><!--end grid -->
 								<?php
 								if ( have_posts() ) :
 
@@ -62,8 +63,7 @@ get_header();
 
 								endif;
 								?>
-							</div><!--end grid-tem-->
-						</div><!--end grid -->
+
 
 
 					</div> <!--end col-9 -->
