@@ -38,7 +38,7 @@ get_header();
 
             <figure class="article-preview-image">
 
-                <?php the_post_thumbnail('medium'); ?>
+                <?php the_post_thumbnail('large'); ?>
 
             </figure>
 
