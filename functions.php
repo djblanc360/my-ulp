@@ -204,13 +204,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
-
-function load_js_assets() {
-    if( is_page( ID ) ) {
-        wp_enqueue_script('my-js', 'PATH TO JS FILE', array('jquery'), '', false);
-    }
-}
-
 add_action('wp_enqueue_scripts', 'load_js_assets');
 
 
