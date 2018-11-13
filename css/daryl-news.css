@@ -3,12 +3,11 @@
 .ms-item {
 width: 33%;
 border: 2px solid #333;
-border-color: hsla(0, 0%, 0%, 0.5);
+border-color: #E8E8E8;
 border-radius: 5px;
 height: auto;
 padding: 1rem;
 margin: 1rem;
-opacity: 0.5;
 }
 
 div.ms-item
