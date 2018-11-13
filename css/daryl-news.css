@@ -37,11 +37,11 @@ div.ms-item
   color: white;
   font-size: 20px;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 30%;
-  -webkit-transform: translate(-30%, -30%);
-  -ms-transform: translate(-30%, -30%);
-  transform: translate(-30%, -30%);
+  -webkit-transform: translate(-20%, -30%);
+  -ms-transform: translate(-20%, -30%);
+  transform: translate(-20%, -30%);
 }
 
 /* LINK STYLING */
