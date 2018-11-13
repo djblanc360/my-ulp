@@ -23,11 +23,14 @@ div.ms-item .overlay
     background-color:#0A2B4E;
     display:none;
 }
-div.ms-item:hover .overlay 
+div.ms-item:hover .overlay
 {
     display:block;
 }
 
+.overlay {
+  color:white;
+}
 
 #ms-container {
   grid-column-gap: 1em;
