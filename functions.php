@@ -216,7 +216,7 @@ add_action('wp_enqueue_scripts', 'load_js_assets');
 
 function load_js_assets() {
     if( is_page( 11 ) ) {
-        wp_enqueue_script('news', 'http://www.brytdesigns.ulp.dev/wp-content/themes/ulp/js/news.js', array('jquery'), '', false);
+        wp_enqueue_script('news-js', get_template_directory_uri() . '/js/news.js', '', '', true);
     }
 }
 
