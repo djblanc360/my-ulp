@@ -34,7 +34,7 @@ div.ms-item:hover .overlay
 }
 
 a.overlay.post-title-link {color:white;}
-a.overlay:link {color:##FDB827;}
+a.overlay:link {color:#white;}
 a.overlay:visited {color:##FDB827;}
 a.overlay:hover {}
 
