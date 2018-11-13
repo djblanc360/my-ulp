@@ -1,5 +1,6 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 <script src="/path/to/masonry.pkgd.min.js"></script>
+<script src="/js/news.js"></script>
 <?php
 /**
  * The main template file
@@ -22,44 +23,55 @@ get_header();
 
 			<div class="container">
 
-				<div id="masonry">
-				<?php
-				$args = array(
-				    'posts_per_page'   => 10,
-				    'orderby'          => 'post_date',
-				    'order'            => 'DESC',
-				    'post_type'        => 'post',
-				    'post_status'      => 'publish',
-				    'suppress_filters' => false );
+				<div class="row">
 
-				    $recent_posts = get_posts( $args );
-				    foreach ($recent_posts as $key=>$post): setup_postdata( $post ); {
-				    ?>
-				                <div class="item normal" data-order='1'><!--BEGIN .item -->
-				                    <div <?php post_class(); ?> id="featured-<?php the_ID(); ?>">
+					<div class="col-9">
 
-				                        <?php
+						<div class="grid">
+							<div class="grid-item">
+							</div><!--end grid-tem-->
+						</div><!--end grid -->
+								<?php
+								if ( have_posts() ) :
+
+									if ( is_home() && ! is_front_page() ) :
+										?>
+										<header>
+											<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+										</header>
+										<?php
+									endif;
+
+									/* Start the Loop */
+									while ( have_posts() ) :
+
+										the_post();
+
+										/*
+										 * Include the Post-Type-specific template for the content.
+										 * If you want to override this in a child theme, then include a file
+										 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+										 */
+										get_template_part( 'template-parts/content', get_post_type() );
+
+									endwhile;
+
+									the_posts_navigation();
+
+								else :
+
+									get_template_part( 'template-parts/content', 'none' );
+
+								endif;
+								?>
 
 
-				                            if (has_post_thumbnail(get_the_ID())) {
-				                                echo '<a href="' . get_permalink(get_the_ID()) . '">';
-				                                echo get_the_post_thumbnail(get_the_ID(), 'archive_grid');
-				                                echo '</a>';
-				                            }
-				                        ?>
 
-				                    </div>
-				                </div>
-				    <?php } ?> //end of foreach loop
-				    <?php get_template_part('includes/index-loadmore'); ?>
-
-				    </div><!--END #masonry -->
-
-				    <div id="masonry-new"></div>
-
-				    <div class="post-navigation clearfix"><!--BEGIN .post-navigation -->
-				    <?php dt_pagination(); ?>
-				    </div><!--END .post-navigation -->
+					</div> <!--end col-9 -->
+					<div class="col-3">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
 			</div>
 
 		</main><!-- #main -->
