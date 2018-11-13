@@ -28,7 +28,7 @@ get_header();
 
 </script>
 
-<h1>The latest news from ULP</h1>
+<h2>The latest news from ULP</h2>
 <div class="row" id="ms-container">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -50,8 +50,12 @@ get_header();
 						<P>
 							<?php the_author(); ?>  |	<?php the_category( ', ' ); ?>
 						</P>
+						<hr>
         <?php the_excerpt(); ?>
-
+				<hr>
+				<p>
+				<?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?>
+				</p>
     <div class="clearfix"></div>
 
 <a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
