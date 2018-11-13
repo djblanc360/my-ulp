@@ -44,19 +44,20 @@ div.ms-item
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.overlay-text a:hover,
+
 .overlay-text a:visited
 {
     color: white;
 }
 
-a:hover {
-
+.overlay-text a:hover {
+  text-decoration: none;
+  color: ##fdc95a;
 }
 
 /* selected link */
 a:active {
-    color: blue;
+    color: white;
 }
 #ms-container {
   grid-column-gap: 1em;
