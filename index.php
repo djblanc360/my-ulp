@@ -29,7 +29,7 @@ get_header();
 </script>
 
 <h2>The latest news from ULP</h2>
-<div id="container">
+<div class="container">
 <div class="row" id="ms-container">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -53,7 +53,7 @@ get_header();
 						</P>
 						<hr>
         <?php the_excerpt(); ?>
-				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
+				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block read-more-button">Read More</a>
 				    <div class="clearfix"></div>
 				<hr>
 				<p>
