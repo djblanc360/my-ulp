@@ -45,6 +45,8 @@ h2 {
 
 .container {
   width:90%;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
 .read-more-button {
