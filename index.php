@@ -23,6 +23,9 @@ get_header();
 			<div class="container">
 
 				<div class="row">
+					<P>
+						adding stuff
+					</P>
 					<div class="col-9">
 
 						<div class="grid">
