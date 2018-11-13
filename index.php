@@ -46,7 +46,7 @@ get_header();
 
         <?php endif; ?>
 
-            <h2 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h2>
+            <h4 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h4>
 
         <?php the_excerpt(); ?>
 
