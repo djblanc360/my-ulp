@@ -31,6 +31,10 @@ height: 500px;
 padding: 1rem;
 }
 
+#ms-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
 h1 {
   text-transform: uppercase;

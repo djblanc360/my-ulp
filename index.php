@@ -32,7 +32,7 @@ get_header();
 <div class="row" id="ms-container">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="ms-item col-sm-6 col-sm-6 col-sm-6 col-xs-12">
 
         <?php if (has_post_thumbnail()) : ?>
 
@@ -46,7 +46,7 @@ get_header();
 
         <?php endif; ?>
 
-            <h4 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h4>
+            <h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h6>
 
         <?php the_excerpt(); ?>
 
