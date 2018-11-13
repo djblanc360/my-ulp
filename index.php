@@ -64,9 +64,11 @@ get_header();
 
 				<div class="overlay">
 					<div class="overlay-text">
-									<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h6>
+									<div class="overlay-title"> 
+										<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"> <?php the_title(); ?></a></h6>
+									</div>
 									<P>
-										<?php the_author(); ?>  |	<?php the_category( ', ' ); ?>
+										<?php the_author(); ?>  |	<div class="overlay-link"> <?php the_category( ', ' ); ?> </div>
 									</P>
 									<hr>
 							<?php the_excerpt(); ?>
@@ -74,7 +76,7 @@ get_header();
 									<div class="clearfix"></div>
 							<hr>
 							<p>
-							<?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?>
+							<div class="overlay-link"> <?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?> </div>
 							</p>
 					<div class="clearfix"></div>
 				</div><!-- end text -->

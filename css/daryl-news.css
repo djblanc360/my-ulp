@@ -45,20 +45,36 @@ div.ms-item
   text-align: center;
 }
 
-.overlay-text a:visited
+.overlay-title a:visited
 {
     color: white;
 }
 
-.overlay-text a:hover {
+.overlay-title a:hover {
   text-decoration: none;
-  color: ##fdc95a;
+  color: white;
 }
 
 /* selected link */
-a:active {
+.overlay-title a:active {
     color: white;
 }
+
+.overlay-link a:visited
+{
+    color: #fdc95a;
+}
+
+.overlay-link a:hover {
+  text-decoration: none;
+  color: #fdc95a;
+}
+
+/* selected link */
+.overlay-link a:active {
+    color: #fdc95a;
+}
+
 #ms-container {
   grid-column-gap: 1em;
   grid-row-gap: 1em;
