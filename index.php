@@ -64,11 +64,11 @@ get_header();
 
 				<div class="overlay">
 					<div class="overlay-text">
-									<div class="overlay-title"> 
+									<span class="overlay-title">
 										<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"> <?php the_title(); ?></a></h6>
-									</div>
+									</span>
 									<P>
-										<?php the_author(); ?>  |	<div class="overlay-link"> <?php the_category( ', ' ); ?> </div>
+										<?php the_author(); ?>  |	<span class="overlay-link"> <?php the_category( ', ' ); ?> </span>
 									</P>
 									<hr>
 							<?php the_excerpt(); ?>
