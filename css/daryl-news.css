@@ -57,6 +57,9 @@ h2 {
   padding: 10px;
   border-radius: 25px;
 }
+a .read-more-button {
+    color: #0A2B4E;
+}
 
 hr {
   border-color:#fdc95a;
