@@ -29,6 +29,7 @@ get_header();
 </script>
 
 <h2>The latest news from ULP</h2>
+<div id="container">
 <div class="row" id="ms-container">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -77,6 +78,6 @@ get_header();
 
                 </div>
 <div class="clearfix"></div>
-
+</div>
 
 <?php get_footer(); ?>

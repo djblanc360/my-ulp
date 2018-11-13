@@ -43,6 +43,10 @@ h2 {
 
 }
 
+#container {
+  width:90%;
+}
+
 hr {
   border-color:#fdc95a;
 }
