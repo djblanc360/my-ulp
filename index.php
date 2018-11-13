@@ -52,15 +52,15 @@ get_header();
 						</P>
 						<hr>
         <?php the_excerpt(); ?>
+				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
+				    <div class="clearfix"></div>
 				<hr>
 				<p>
 				<?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?>
 				</p>
     <div class="clearfix"></div>
 
-<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block">Read More</a>
 
-    <div class="clearfix"></div>
 
     </div>
 
