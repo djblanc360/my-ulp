@@ -101,7 +101,7 @@ get_header();
 <div class="news-navigation">
 	<span class="pagination-buttons">
 
-			<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/home-icon.png" alt="home icon">
+			<a href="<?php the_permalink(); ?>"><img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/home-icon.png" alt="home icon"></a>
 	</span>
 	<span class="nav-previous pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
 	<span class="nav-next pagination-buttons"><?php next_posts_link( '>' ); ?></span>
