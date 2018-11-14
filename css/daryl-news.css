@@ -127,6 +127,7 @@ hr {
   color: white;
   text-decoration: none;
   background-color: #0A2B4E;
+  padding: 15px;
 }
 
 .pagination-buttons a:hover {
