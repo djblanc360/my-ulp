@@ -118,13 +118,24 @@ hr {
 }
 
 .pagination-buttons {
-  padding: 1rem;
-  background-color: #0A2B4E;
+
   text-decoration: none;
+  width:1rem;
+  height:1rem;
 }
+.pagination-buttons a {
+  color: white;
+  text-decoration: none;
+  background-color: #0A2B4E;
+}
+
 .pagination-buttons a:hover {
-  color: #FDB827;
+  color: #0A2B4E;
+  text-decoration: none;
+  background-color: #FDB827;
 }
 .pagination-buttons a:active {
-  color: #FDB827;
+  color:  #0A2B4E;
+  text-decoration: none;
+  background-color: #FDB827;
 }
