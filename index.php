@@ -31,7 +31,14 @@ get_header();
 <h2>The latest news from ULP</h2>
 <div class="container">
 <div class="row" id="ms-container">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+	<?php
+	   // the query
+	   $the_query = new WP_Query( array(
+	      'posts_per_page' => 9,
+	   ));
+	?>
+<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 	<!-- ADD OVERLAY HERE -->
 
     <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
