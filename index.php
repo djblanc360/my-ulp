@@ -83,9 +83,11 @@ get_header();
 				</div><!-- end overlay -->
     </div>
 
-    <?php endwhile;
-
-    else : ?>
+    <?php endwhile; ?>
+		<!--paginationn functions here -->
+		<div class="nav-previous alignleft"><?php previous_posts_link( 'Older posts' ); ?></div>
+		<div class="nav-next alignright"><?php next_posts_link( 'Newer posts' ); ?></div>		
+  <?php  else : ?>
 
         <article class="no-posts">
 
@@ -94,7 +96,7 @@ get_header();
         </article>
     <?php endif; ?>
 
-                </div>
+	</div> <!--end row ms-container -->
 <div class="clearfix"></div>
 </div>
 
