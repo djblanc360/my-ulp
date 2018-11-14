@@ -100,26 +100,17 @@ get_header();
 <!--paginationn functions here -->
 <div class="news-navigation">
 	<span class="pagination-buttons">
-			<?php
-			$args = array(
-				'numberposts' => 10,
-				'offset' => 0,
-				'category' => 0,
-				'orderby' => 'post_date',
-				'order' => 'DESC',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' =>'',
-				'post_type' => 'post',
-				'post_status' => 'draft, publish, future, pending, private',
-				'suppress_filters' => true
-			);
 
-			$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+			<?php
+				$args = array( 'numberposts' => '5' );
+				$recent_posts = wp_get_recent_posts( $args );
+				foreach( $recent_posts as $recent ){
+					echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+				}
+				wp_reset_query();
 			?>
 	</span>
-	<span class="pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
-	<span class="pagination-buttons"><?php next_posts_link( '>' ); ?></span>
+	<span class="nav-previous pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
+	<span class="nav-next pagination-buttons"><?php next_posts_link( '>' ); ?></span>
 </div>
 <?php get_footer(); ?>
