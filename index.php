@@ -101,14 +101,7 @@ get_header();
 <div class="news-navigation">
 	<span class="pagination-buttons">
 
-			<?php
-				$args = array( 'numberposts' => '5' );
-				$recent_posts = wp_get_recent_posts( $args );
-				foreach( $recent_posts as $recent ){
-					echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-				}
-				wp_reset_query();
-			?>
+		<img src="/img/home-icon.png" />
 	</span>
 	<span class="nav-previous pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
 	<span class="nav-next pagination-buttons"><?php next_posts_link( '>' ); ?></span>
