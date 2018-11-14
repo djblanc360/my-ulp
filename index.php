@@ -96,6 +96,7 @@ get_header();
 	</div> <!--end row ms-container -->
 <div class="clearfix"></div>
 
+</div><!--end container -->
 <!--paginationn functions here -->
 <div class="news-navigation">
 	<span class="pagination-buttons">
@@ -118,12 +119,7 @@ get_header();
 			$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 			?>
 	</span>
-	<span class="nav-previous pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
-	<span class="nav-next pagination-buttons"><?php next_posts_link( '>' ); ?></span>
+	<span class="pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
+	<span class="pagination-buttons"><?php next_posts_link( '>' ); ?></span>
 </div>
-
-
-
-</div><!--end container -->
-
 <?php get_footer(); ?>
