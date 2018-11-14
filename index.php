@@ -105,12 +105,19 @@ get_header();
 
 </div><!--end container -->
 <!--paginationn functions here -->
+<?php
+$var = 0;
+
+ ?>
 <div class="news-navigation">
 	<span class="pagination-buttons">
-
 			<a href="<?php echo site_url(); ?>/news/"><img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/home-icon.png" alt="home icon"></a>
 	</span>
-	<span class="nav-previous pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
-	<span class="nav-next pagination-buttons"><?php next_posts_link( '>' ); ?></span>
+	<span class="pagination-buttons">
+			<a href="<?php echo site_url(); ?>/news/<?php $var-- ?>"><pre>><</pre></a>
+	</span>
+	<span class="pagination-buttons">
+			<a href="<?php echo site_url(); ?>/news/<?php $var++ ?>"><pre>><</pre></a>
+	</span>
 </div>
 <?php get_footer(); ?>
