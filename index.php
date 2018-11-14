@@ -97,7 +97,7 @@ get_header();
 <div class="clearfix"></div>
 
 <!--paginationn functions here -->
-<div class="">
+<div class="news-navigation">
 	<span class="pagination-buttons">
 			<?php
 			$args = array(
