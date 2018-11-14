@@ -33,72 +33,31 @@ get_header();
 <div class="row" id="ms-container">
 
 	<?php
-	   // the query
-	   $the_query = new WP_Query( array(
-	      'posts_per_page' => 9,
-	   ));
+	$postlist = get_posts( 'orderby=menu_order&sort_order=asc' );
+	$posts = array();
+	foreach ( $postlist as $post ) {
+	   $posts[] += $post->ID;
+	}
+
+	$current = array_search( get_the_ID(), $posts );
+	$prevID = $posts[$current-1];
+	$nextID = $posts[$current+1];
 	?>
-<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-	<!-- ADD OVERLAY HERE -->
 
-    <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
-
-        <?php if (has_post_thumbnail()) : ?>
-
-            <figure class="article-preview-image">
-
-                <?php the_post_thumbnail('large'); ?>
-
-            </figure>
-
-        <?php else : ?>
-
-        <?php endif; ?>
-
-            <h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h6>
-						<P>
-							<?php the_author(); ?>  |	<?php the_category( ', ' ); ?>
-						</P>
-						<hr>
-        <?php the_excerpt(); ?>
-				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-block read-more-button">Read More</a>
-				    <div class="clearfix"></div>
-				<hr>
-				<p>
-				<?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?>
-				</p>
-    <div class="clearfix"></div>
-
-				<div class="overlay">
-					<div class="overlay-text">
-									<span class="overlay-title">
-										<h6 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"> <?php the_title(); ?></a></h6>
-									</span>
-									<P>
-										<?php the_author(); ?>  |	<span class="overlay-link"> <?php the_category( ', ' ); ?> </span>
-									</P>
-									<hr>
-							<?php the_excerpt(); ?>
-
-									<div class="clearfix"></div>
-							<hr>
-							<p>
-							<span class="overlay-link"> <?php comments_number( $zero, $one, $more ); ?>  |	<?php the_date(); ?> </span>
-							</p>
-					<div class="clearfix"></div>
-				</div><!-- end text -->
-				</div><!-- end overlay -->
-    </div>
-
-    <?php endwhile; ?>
-  <?php  else : ?>
-
-        <article class="no-posts">
-
-            <h1><?php _e('No posts were found.'); ?></h1>
-
-        </article>
-    <?php endif; ?>
+	<div class="navigation">
+	<?php if ( !empty( $prevID ) ): ?>
+	<div class="alignleft">
+	<a href="<?php echo get_permalink( $prevID ); ?>"
+	  title="<?php echo get_the_title( $prevID ); ?>">Previous</a>
+	</div>
+	<?php endif;
+	if ( !empty( $nextID ) ): ?>
+	<div class="alignright">
+	<a href="<?php echo get_permalink( $nextID ); ?>"
+	 title="<?php echo get_the_title( $nextID ); ?>">Next</a>
+	</div>
+	<?php endif; ?>
+	</div><!-- .navigation -->
 
 	</div> <!--end row ms-container -->
 <div class="clearfix"></div>
