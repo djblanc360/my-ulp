@@ -116,3 +116,15 @@ a .read-more-button {
 hr {
   border-color:#fdc95a;
 }
+
+.pagination-buttons {
+  padding: 1rem;
+  background-color: #0A2B4E;
+  text-decoration: none;
+}
+.pagination-buttons a:hover {
+  color: #FDB827;
+}
+.pagination-buttons a:active {
+  color: #FDB827;
+}

@@ -97,8 +97,14 @@ get_header();
 <div class="clearfix"></div>
 
 <!--paginationn functions here -->
-<div class="nav-previous alignleft"><?php previous_posts_link( '<' ); ?></div>
-<div class="nav-next alignright"><?php next_posts_link( '>' ); ?></div>	
+<div class="">
+	<span class="pagination-buttons"><?php wp_get_recent_posts('home') ?></span>
+	<span class="nav-previous alignleft pagination-buttons"><?php previous_posts_link( '<' ); ?></span>
+	<span class="nav-next alignright pagination-buttons"><?php next_posts_link( '>' ); ?></span>
 </div>
+
+
+
+</div><!--end container -->
 
 <?php get_footer(); ?>
