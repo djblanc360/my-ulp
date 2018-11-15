@@ -33,7 +33,7 @@ get_header();
 					<div class="upRecentEventsContainer">
 						<div class="row">
 							<div class="col-sm-6">
-								<div class="upRecentEventsContainerInner">
+								<div class="upRecentEventsContainerInner" style="background-image: url(<? the_field('events_1_bg_image'); ?>);">
 									<h2 class="text-center">Upcoming Events</h2>
 									<div class="upFeed">
 
@@ -42,6 +42,7 @@ get_header();
 										   $the_query = new WP_Query( array(
 										   		'post_type'			 => 'events',
 										      'posts_per_page' => 3,
+										      'category_name'  => 'upcoming-events',
 										   )); 
 										?>
 
@@ -50,18 +51,21 @@ get_header();
 
 										    <div class="upFeedItem">
 														<div class="row">
-															<div class="col-3">
-																<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+															<div class="col-4">
+																<div class="newEventImage" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)">
+																	<a class="newEventImageLink" href="<?php the_permalink(); ?>"></a>
+																</div>
 															</div>
-															<div class="col-9">
-																<p class="postTime"><?php the_field('event_date'); ?></p>
-																<h4 class="postTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-																<p class="postTease"><?php the_excerpt(); ?></p>
-																<p class="postReadMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
+															<div class="col-8">
+																<div class="newEventText">
+																	<p class="postTime"><?php echo get_the_date(); ?></p>
+																	<h4 class="postTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+																	<p class="postTease"><?php the_excerpt(); ?></p>
+																	<p class="postReadMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
+																</div>
 															</div>
 														</div>
 													</div>
-										    
 
 										  <?php endwhile; ?>
 										  <?php wp_reset_postdata(); ?>
@@ -74,7 +78,7 @@ get_header();
 								</div>
 							</div>
 							<div class="col-sm-6">
-								<div class="upRecentEventsContainerInner">
+								<div class="upRecentEventsContainerInner" style="background-image: url(<? the_field('events_2_bg_image'); ?>);">
 									<h2 class="text-center">Recent Events</h2>
 									<div class="upFeed">
 
@@ -85,6 +89,7 @@ get_header();
 										   $the_query = new WP_Query( array(
 										   		'post_type'			 => 'events',
 										      'posts_per_page' => 3,
+										      'category_name'  => 'recent-events',
 										   )); 
 										?>
 
@@ -93,14 +98,18 @@ get_header();
 
 										    <div class="upFeedItem">
 														<div class="row">
-															<div class="col-3">
-																<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+															<div class="col-4">
+																<div class="newEventImage" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)">
+																	<a class="newEventImageLink" href="<?php the_permalink(); ?>"></a>
+																</div>
 															</div>
-															<div class="col-9">
-																<p class="postTime"><?php the_field('event_date'); ?></p>
-																<h4 class="postTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-																<p class="postTease"><?php the_excerpt(); ?></p>
-																<p class="postReadMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
+															<div class="col-8">
+																<div class="newEventText">
+																	<p class="postTime"><?php echo get_the_date(); ?></p>
+																	<h4 class="postTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+																	<p class="postTease"><?php the_excerpt(); ?></p>
+																	<p class="postReadMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -125,147 +134,41 @@ get_header();
 
 			<section id="pastEvents" class="container">
 				<h2 class="text-center">Past Events</h2>
-				<div class="grid">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
+
+				<div class="row">
+
+					<?php 
+					   // the query
+					   $the_query = new WP_Query( array(
+					   		'post_type'			 => 'events',
+					      'posts_per_page' => -1,
+					   )); 
+					?>
+
+					<?php if ( $the_query->have_posts() ) : ?>
+					  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+							<div class="col-sm-4">
+								<a href="<?php the_permalink(); ?>">
+									<div class="pastEventContainer" style="background-image:url(<?php echo the_post_thumbnail_url('large'); ?>);">
+										<div class="pastEventImageContainer">
+											<div class="pastEventTeaser">
+												<h3><?php the_title(); ?></h3>
+												<p class="pastEventDate"><?php echo get_the_date(); ?></p>
+											</div>
+										</div>
 									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
+								</a>
 							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="pastEventContainer">
-								<div class="pastEventImageContainer">
-									<img src="<?php echo site_url(); ?>/wp-content/themes/ulp/img/event-demo.jpg" alt="">
-									<div class="pastEventTeaser">
-										<h3>Pellentesque habitant morbi tristique</h3>
-									</div>
-								</div>
-								<p class="pastEventDate text-center">24 July, 2018</p>
-							</div>
-						</div>
-					</div>
+											    
+
+					  <?php endwhile; ?>
+					  <?php wp_reset_postdata(); ?>
+
+					<?php else : ?>
+					  <p><?php __('No News'); ?></p>
+					<?php endif; ?>
+
 				</div>
 			</section>
 

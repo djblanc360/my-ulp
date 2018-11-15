@@ -17,6 +17,7 @@ body{font-family:'Libre Baskerville',serif}
 body h2{margin-bottom:2rem}
 body p,body li,body address{font-family:'Helvetica',Arial,sans-serif}
 body ul{margin-left:0;text-align:left}
+body hr{border-top:1px solid #ddd}
 section{padding-top:4rem;padding-bottom:4rem}
 .button{padding:10px 25px;border-radius:25px;border:2px solid #0a2b4e;color:#0a2b4e;text-decoration:none;text-transform:uppercase;display:inline-block;font-size:.8rem;font-weight:bold;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
 .button:hover{text-decoration:none;background-color:#0a2b4e;color:#fff}
@@ -26,6 +27,8 @@ section{padding-top:4rem;padding-bottom:4rem}
 .button.cta:hover{background-color:transparent;color:#fdb827}
 .button.white{color:#fff;background-color:transparent;border-color:#fff}
 .button.white:hover{background-color:#fff;color:#0a2b4e}
+#singleCustomBreadcrumbs{margin-top:1rem;text-transform:uppercase;font-size:.8rem}
+.singleCustomHeader{margin-top:2rem;margin-bottom:1rem}
 .slick-dots{margin-left:0;padding-left:0;text-align:center;list-style:none}
 .slick-dots li{display:inline-block;width:10px;height:10px;content:' ';padding:0;color:transparent;border-radius:50%;border:0;margin:5px;background:#ddd}
 .slick-dots li button{display:none}

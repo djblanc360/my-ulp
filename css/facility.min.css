@@ -1,7 +1,7 @@
 .page-template-page-facility .facilityIntroInner{text-align:center}
-.page-template-page-facility #facilityFeature{background:#f2f2f2}
-.page-template-page-facility #facilityFeature .facilityItemNavContainer{margin-bottom:40px;text-align:center;width:800px;max-width:100%;margin-left:auto;margin-right:auto}
-.page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav{display:inline-block;color:#0a2b4e;opacity:.6;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;margin-left:15px;margin-right:15px;text-transform:uppercase;font-weight:bold}
+.page-template-page-facility #facilityFeature{background:#f2f2f2;background-size:cover;background-position:top right}
+.page-template-page-facility #facilityFeature .facilityItemNavContainer{text-align:center;width:800px;max-width:100%;margin-left:auto;margin-right:auto}
+.page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav{display:inline-block;color:#0a2b4e;opacity:.4;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;margin-left:15px;margin-right:15px;text-transform:uppercase;font-weight:bold}
 .page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav.slick-current,.page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav:hover,.page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav:focus{opacity:1;text-decoration:none;outline:0}
 .page-template-page-facility #facilityFeature .facilityItemNavContainer .facilityItemNav:hover{cursor:pointer}
 .page-template-page-facility #facilityFeature .facilityItemContainerSlider .facilityItemContainer{background-color:#fff;padding:30px;border-radius:5px;-webkit-box-shadow:none;box-shadow:none;margin-left:auto;margin-right:auto;-webkit-transition:all 2s ease-in-out;transition:all 2s ease-in-out;margin-bottom:40px;margin-top:40px;max-width:980px}

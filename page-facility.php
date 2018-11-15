@@ -17,7 +17,7 @@ get_header();
 
 				<div class="facilityIntroInner">
 					
-					<h2>Work with Like-Minded People</h2>
+					<h2>Unprecedented Access at an Affordable Price</h2>
 					<?php
 					while ( have_posts() ) :
 						the_post();
@@ -38,13 +38,13 @@ get_header();
 
 			</section>
 
-			<section id="facilityFeature">
+			<section id="facilityFeature" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2018/11/ulp-facility-bg.jpg);">
 				<div class="">
 					<div class="facilityItemNavContainer text-center">
-						<div class="facilityItemNav"><?php the_field('space_1_title'); ?></div>
-						<div class="facilityItemNav"><?php the_field('space_2_title'); ?></div>
-						<div class="facilityItemNav"><?php the_field('space_3_title'); ?></div>
-						<div class="facilityItemNav"><?php the_field('space_4_title'); ?></div>
+						<div class="facilityItemNav"><p><i class="fas fa-chair"></i><br/><?php the_field('space_1_title'); ?></p></div>
+						<div class="facilityItemNav"><p><i class="fas fa-door-open"></i><br/><?php the_field('space_2_title'); ?></p></div>
+						<div class="facilityItemNav"><p><i class="far fa-building"></i><br/><?php the_field('space_3_title'); ?></p></div>
+						<div class="facilityItemNav"><p><i class="fas fa-desktop"></i><br/><?php the_field('space_4_title'); ?></p></div>
 					</div>
 					<div class="facilityItemContainerSlider">
 
@@ -394,7 +394,7 @@ get_header();
 			</section>
 
 			<section id="addServices" class="container text-center">
-				<h2>Additional Services</h2>
+				<h2>Shared Resources</h2>
 				<?php if( have_rows('service_offered') ): ?>
 
 					<div class="addServicesSlider">

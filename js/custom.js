@@ -54,7 +54,6 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.facilityItemNavContainer',
-    dots: true,
     centerMode: true,
     arrows: false,
     speed: 1500
@@ -76,5 +75,27 @@ $(document).ready(function () {
     arrows: true,
     prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
     nextArrow: '<i class="fas fa-chevron-right slick-next"></i>'
+  });
+  $('.eventItemGallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    asNavFor: '.eventItemGalleryNav',
+    prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+    nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+    fade: true,
+    cssEase: 'linear'
+  });
+  $('.eventItemGalleryNav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    asNavFor: '.eventItemGallery',
+    prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+    nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+    focusOnSelect: true
   });
 });

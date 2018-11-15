@@ -16,7 +16,7 @@ get_header();
 			<section id="aboutIntro" class="container">
 
 				<div class="aboutIntroInner">
-				
+
 					<h2>About University Lab Partners</h2>
 					<?php
 					while ( have_posts() ) :
@@ -46,7 +46,7 @@ get_header();
 					</div>
 					<div class="col-sm-5">
 
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.3968078332755!2d-117.85684278496062!3d33.64687878071812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde1587012cb7%3A0x2d277442e1a4333b!2sUCI+Research+Park!5e0!3m2!1sen!2sus!4v1539899408112" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<img src="<?php the_field('feature_1_image'); ?>" alt="" class="mx-auto">
 
 					</div>
 				</div>
@@ -76,7 +76,43 @@ get_header();
 
 			<section id="ulpCommunity" class="container text-center">
 				<h2>The ULP Community</h2>
-				<div class="ulpCommSlider">
+
+
+				<?php 
+				   // the query
+				   $the_query = new WP_Query( array(
+				   		'post_type'			 => 'members',
+				      'posts_per_page' => -1,
+				   )); 
+				?>
+
+				<?php if ( $the_query->have_posts() ) : ?>
+
+					<div class="row">
+
+					  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+							<div class="col-sm-3">
+								<a class="memberLink" href="<?php the_permalink(); ?>">
+									<div class="commMemberContainer">
+										<div class="commMemberImgWrap" style="background-image:url(<?php the_post_thumbnail_url('large'); ?>);">
+										</div>
+										<h4><?php the_title(); ?></h4>
+										<p class="memberTitle">Co-Founder <span>&amp;</span> CEO</p>
+									</div>
+								</a>
+							</div>
+
+					  <?php endwhile; ?>
+
+				  </div>
+
+				  <?php wp_reset_postdata(); ?>
+
+				<?php else : ?>
+				  <p class="text-center"><?php __('No Members'); ?></p>
+				<?php endif; ?>
+				<!-- <div class="ulpCommSlider">
 
 					<div>
 						<div class="row">
@@ -251,7 +287,7 @@ get_header();
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 			</section>
 
