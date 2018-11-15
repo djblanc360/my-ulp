@@ -14,26 +14,13 @@
 
 get_header();
 ?>
-<script type="text/javascript">
-
-		jQuery(window).load(function() {
-	var container = document.querySelector('#ms-container');
-	var msnry = new Masonry( container, {
-		itemSelector: '.ms-item',
-		columnWidth: '.ms-item',
-	});
-
-		});
-
-
-</script>
 
 <h2>The latest news from ULP</h2>
 <div class="container">
 <div class="row" id="ms-container">
 
 
-	   
+
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<!-- ADD OVERLAY HERE -->
